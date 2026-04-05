@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PC Monitor & Control</title>
+    <meta name="description" content="A native iOS & Android app for monitoring and controlling your Windows PC over local WiFi." />
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      :root {
+        --navy: #0b1120; --card: #111827; --border: #1e293b;
+        --orange: #f97316; --orange-dim: rgba(249,115,22,.15);
+        --text: #f1f5f9; --muted: #94a3b8; --subtle: #64748b;
+      }
+      body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--navy); color: var(--text); min-height: 100vh; -webkit-font-smoothing: antialiased; }
+      .hero { max-width: 540px; margin: 0 auto; padding: 60px 24px 48px; text-align: center; }
+      .hero-icon { width: 110px; height: 110px; border-radius: 26px; margin: 0 auto 28px; box-shadow: 0 20px 60px rgba(249,115,22,.3); overflow: hidden; display: block; }
+      .hero-icon img { width: 100%; height: 100%; display: block; }
+      .hero h1 { font-size: 30px; font-weight: 800; letter-spacing: -.5px; margin-bottom: 14px; }
+      .hero p { font-size: 16px; line-height: 1.65; color: var(--muted); margin-bottom: 28px; }
+      .badges { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+      .badge { display: inline-flex; align-items: center; gap: 6px; background: var(--card); border: 1px solid var(--border); border-radius: 999px; padding: 6px 14px; font-size: 13px; font-weight: 600; color: var(--muted); }
+      .divider { height: 1px; background: var(--border); }
+      .section { max-width: 540px; margin: 0 auto; padding: 44px 24px; }
+      .section-label { font-size: 12px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--orange); margin-bottom: 20px; }
+      .feature-list { display: flex; flex-direction: column; gap: 12px; }
+      .feature-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 20px; display: flex; align-items: flex-start; gap: 16px; }
+      .feature-icon { width: 44px; height: 44px; border-radius: 12px; background: var(--orange-dim); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
+      .feature-title { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+      .feature-desc { font-size: 14px; line-height: 1.55; color: var(--muted); }
+      .feedback-cards { display: flex; flex-direction: column; gap: 12px; }
+      .feedback-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 20px; text-decoration: none; display: flex; align-items: center; gap: 16px; transition: border-color .15s, background .15s; }
+      .feedback-card:hover { border-color: var(--orange); background: #151f30; }
+      .f-icon { font-size: 26px; flex-shrink: 0; }
+      .f-title { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 3px; }
+      .f-desc { font-size: 13px; color: var(--muted); }
+      .arrow { margin-left: auto; color: var(--subtle); font-size: 20px; flex-shrink: 0; }
+      .gh-link { display: inline-flex; align-items: center; gap: 8px; background: var(--card); border: 1px solid var(--border); color: var(--muted); font-size: 13px; font-weight: 600; padding: 8px 16px; border-radius: 999px; text-decoration: none; transition: border-color .15s, color .15s; margin-top: 4px; }
+      .gh-link:hover { border-color: var(--orange); color: var(--text); }
+      footer { border-top: 1px solid var(--border); text-align: center; padding: 28px 24px; font-size: 13px; color: var(--subtle); }
+      footer a { color: var(--orange); text-decoration: none; }
+      @media (min-width: 600px) { .hero h1 { font-size: 36px; } }
+    </style>
+  </head>
+  <body>
+    <div class="hero">
+      <div class="hero-icon"><img src="./icon.png" alt="PC Monitor & Control icon" /></div>
+      <h1>PC Monitor &amp; Control</h1>
+      <p>A native iOS &amp; Android app for monitoring and controlling your Windows PC over local WiFi — no cloud, no subscriptions, fully private.</p>
+      <div class="badges">
+        <div class="badge"><span>📱</span> iOS &amp; Android</div>
+        <div class="badge"><span>🪟</span> Windows</div>
+        <div class="badge"><span>📶</span> Local WiFi</div>
+        <div class="badge"><span>🔒</span> No Cloud</div>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="section">
+      <div class="section-label">Features</div>
+      <div class="feature-list">
+        <div class="feature-card"><div class="feature-icon">📊</div><div><div class="feature-title">Real-time Hardware Monitoring</div><div class="feature-desc">CPU, GPU, RAM, fans, temperatures, disks, and network stats — updated live every 2 seconds.</div></div></div>
+        <div class="feature-card"><div class="feature-icon">🎛️</div><div><div class="feature-title">Fully Customisable Dashboard</div><div class="feature-desc">Drag to reorder cards, rename them, pick icons, and add custom sensor cards for any metric.</div></div></div>
+        <div class="feature-card"><div class="feature-icon">🖥️</div><div><div class="feature-title">Multiple PC Support</div><div class="feature-desc">Monitor and switch between multiple PCs on your local network from one app.</div></div></div>
+        <div class="feature-card"><div class="feature-icon">🔌</div><div><div class="feature-title">PC Controls</div><div class="feature-desc">Shutdown, restart, sleep, and lock your PC directly from your phone.</div></div></div>
+        <div class="feature-card"><div class="feature-icon">🔒</div><div><div class="feature-title">Completely Private</div><div class="feature-desc">No accounts, no cloud, no telemetry. Everything stays on your local network.</div></div></div>
+        <div class="feature-card"><div class="feature-icon">🎮</div><div><div class="feature-title">Demo Mode</div><div class="feature-desc">Try the full app experience without a PC — explore all cards with live simulated data.</div></div></div>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="section">
+      <div class="section-label">Feedback &amp; Support</div>
+      <div class="feedback-cards">
+        <a class="feedback-card" href="https://github.com/adrianomelnic/remote-pc-control/issues/new?labels=bug&template=bug_report.md" target="_blank">
+          <div class="f-icon">🐛</div><div><div class="f-title">Report a Bug</div><div class="f-desc">Something not working? Open an issue and we'll look into it.</div></div><div class="arrow">›</div>
+        </a>
+        <a class="feedback-card" href="https://github.com/adrianomelnic/remote-pc-control/issues/new?labels=enhancement&template=feature_request.md" target="_blank">
+          <div class="f-icon">💡</div><div><div class="f-title">Request a Feature</div><div class="f-desc">Have an idea for a new card, sensor, or control? We'd love to hear it.</div></div><div class="arrow">›</div>
+        </a>
+        <a class="feedback-card" href="https://github.com/adrianomelnic/remote-pc-control/discussions" target="_blank">
+          <div class="f-icon">💬</div><div><div class="f-title">Discussions</div><div class="f-desc">Questions, tips, or general chat about the app.</div></div><div class="arrow">›</div>
+        </a>
+      </div>
+      <div style="text-align:center; margin-top:28px;">
+        <a class="gh-link" href="https://github.com/adrianomelnic/remote-pc-control" target="_blank">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+          View on GitHub
+        </a>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <footer>
+      <p>© 2026 PC Monitor &amp; Control &nbsp;·&nbsp; <a href="https://github.com/adrianomelnic/remote-pc-control">GitHub</a></p>
+    </footer>
+  </body>
+  </html>
